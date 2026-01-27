@@ -2,7 +2,7 @@
 <div align="center">
     Shiwen Zhang, Xiaoyan Yang, Bojia Zi, Haibin Huang, Chi Zhang, Xuelong Li
     <br>
-    TeleAI
+    Institute of Artificial Intelligence, China Telecom (TeleAI) 
 </div>
 <br>
 <div align="center">
