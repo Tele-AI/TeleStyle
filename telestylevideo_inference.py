@@ -170,8 +170,8 @@ if __name__ == "__main__":
         "num_inference_steps": 25,
         "ckpt_t2v_path": "./Wan2.1-T2V-1.3B-Diffusers",
         "ckpt_dit_path": "weights/dit.ckpt",
-        "output_path": "weights/results",
-        "prompt_embeds_path": "assets/prompt_embeds.pth",
+        "prompt_embeds_path": "weights/prompt_embeds.pth",
+        "output_path": "./results"
     }
     
     # 初始化推理器
@@ -179,12 +179,12 @@ if __name__ == "__main__":
     
     data_list = [
         {
-            "video_path": "assets/2.mp4",
-            "image_path": "assets/2-0.png"
+            "video_path": "assets/example/2.mp4",
+            "image_path": "assets/example/2-0.png"
         },
         {
-            "video_path": "assets/2.mp4",
-            "image_path": "assets/2-1.png"
+            "video_path": "assets/example/2.mp4",
+            "image_path": "assets/example/2-1.png"
         },
     ]
 
