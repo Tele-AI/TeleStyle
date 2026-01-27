@@ -8,6 +8,8 @@
 <div align="center">
     [<a href="todo" target="_blank">Project Page</a>]
     [<a href="todo" target="_blank">arXiv</a>]
+    [<a href="https://huggingface.co/Tele-AI/TeleStyle" target="_blank">Hugging Face</a>]
+    [<a href="https://github.com/Tele-AI/TeleStyle" target="_blank">GitHub</a>]
 </div>
 
 ## Abstract
