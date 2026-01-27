@@ -16,11 +16,11 @@ pipe = QwenImagePipeline.from_pretrained(
     processor_config=ModelConfig(model_id="Qwen/Qwen-Image-Edit", origin_file_pattern="processor/"),
 )
 
-speedup = hf_hub_download(repo_id="witcherderivia/Qwen-Image-Style-Transfer", filename="diffsynth_Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors")
-qwenstyle= hf_hub_download(repo_id="witcherderivia/Qwen-Image-Style-Transfer", filename="diffsynth_Qwen-Image-Edit-2509-Style-Transfer-V1.safetensors")
+telestyle_image= hf_hub_download(repo_id="Tele-AI/TeleStyle", filename="weights/diffsynth_Qwen-Image-Edit-2509-telestyle.safetensors")
 
+speedup = hf_hub_download(repo_id="Tele-AI/TeleStyle", filename="weights/diffsynth_Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors")
 
-pipe.load_lora(pipe.dit, qwenstyle)
+pipe.load_lora(pipe.dit,telestyle_image)
 pipe.load_lora(pipe.dit,speedup)
 
 
@@ -59,7 +59,7 @@ image = pipe(prompt, edit_image=images, seed=123, num_inference_steps=4, height=
 
 
 
-save_dir=f'./qwen_style_output/'
+save_dir=f'./telestyle_image_output/'
 
 os.makedirs(save_dir,exist_ok=True)
 prefix=style_ref.split('/')[-1].split('.')[0]
