@@ -17,12 +17,12 @@ Content-preserving style transfer—generating stylized outputs based on content
 
 ## Latest News
 
-- Jan 28, 2026: We release the <a href="https://github.com/Tele-AI/TeleStyle" target="_blank">code</a> of TeleStyle
-  
+- Jan 28, 2026: We release the <a href="https://github.com/Tele-AI/TeleStyle" target="_blank">code</a> and <a href="https://huggingface.co/Tele-AI/TeleStyle" target="_blank">model</a> of TeleStyle
+
 ## Todo List
 
 - [x] Release inference code
-- [ ] Release models
+- [x] Release models
 - [ ] Release technical report
 
 
