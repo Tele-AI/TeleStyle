@@ -17,7 +17,7 @@ Content-preserving style transfer—generating stylized outputs based on content
 
 ## Latest News
 
-- Jan 27, 2026: We release the <a href="todo" target="_blank">Technical Report</a> , code and models of TeleStyle
+- Jan 28, 2026: We release the <a href="https://github.com/Tele-AI/TeleStyle" target="_blank">code</a> of TeleStyle
 
 ## Citation
 If you find TeleStyle useful in your research, please kindly cite our paper:
