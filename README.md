@@ -6,8 +6,8 @@
 </div>
 <br>
 <div align="center">
-    [<a href="todo" target="_blank">Project Page</a>]
-    [<a href="todo" target="_blank">arXiv</a>]
+    [<a href="https://tele-ai.github.io/TeleStyle/" target="_blank">Project Page</a>]
+    [<a href="todo" target="_blank">arXiv(comming)</a>]
     [<a href="https://huggingface.co/Tele-AI/TeleStyle" target="_blank">Hugging Face</a>]
     [<a href="https://github.com/Tele-AI/TeleStyle" target="_blank">GitHub</a>]
 </div>
@@ -18,6 +18,56 @@ Content-preserving style transfer—generating stylized outputs based on content
 ## Latest News
 
 - Jan 28, 2026: We release the <a href="https://github.com/Tele-AI/TeleStyle" target="_blank">code</a> of TeleStyle
+  
+## Todo List
+
+- [x] Release inference code
+- [ ] Release models
+- [ ] Release technical report
+
+
+
+## How to use
+
+### 1. Installation
+
+```
+pip install -r requirements.txt
+```
+
+This environment is tested with:
+- Python 3.11
+- PyTorch 2.4.1 + CUDA 12.1
+- diffusers 0.36.0
+- transformers 4.49.0
+
+### 2. Download Checkpoint
+
+Download the [TeleStyle checkpoint](https://huggingface.co/Tele-AI/TeleStyle/tree/main) to a local path for example `weights/`:
+
+We provide Image and Video checkpoint:
+
+- **Image (reference style image + content image -> stylized image)**  
+  diffsynth_Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors; diffsynth_Qwen-Image-Edit-2509-telestyle.safetensors 37
+  
+
+- **Video (stylized first frame + content video -> stylized video)**  
+  dit.ckpt; prompt_embeds.pth
+
+### 3. Inference
+
+We provide inference scripts for running TeleStyle on demo inputs for each task:
+
+#### Image Stylization
+```
+python telestyleimage_inference.py 
+```
+
+#### Video Stylization
+```
+python telestylevideo_inference.py 
+```
+
 
 ## Citation
 If you find TeleStyle useful in your research, please kindly cite our paper:
