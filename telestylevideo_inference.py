@@ -4,6 +4,7 @@ import cv2
 import json
 import time
 import torch
+import argparse
 import numpy as np
 import torch.nn.functional as F
 
@@ -161,47 +162,54 @@ class VideoStyleInference:
         
         return video
 
+def parse_args():
+    parser = argparse.ArgumentParser(description='视频风格转换推理')
+    parser.add_argument('--random_seed', type=int, default=42, help='随机种子')
+    parser.add_argument('--video_length', type=int, default=129, help='视频长度')
+    parser.add_argument('--height', type=int, default=720, help='输出高度')
+    parser.add_argument('--width', type=int, default=1248, help='输出宽度')
+    parser.add_argument('--num_inference_steps', type=int, default=25, help='推理步数')
+    parser.add_argument('--ckpt_t2v_path', type=str, default="./Wan2.1-T2V-1.3B-Diffusers", help='T2V检查点路径')
+    parser.add_argument('--ckpt_dit_path', type=str, default="weights/dit.ckpt", help='DiT检查点路径')
+    parser.add_argument('--prompt_embeds_path', type=str, default="weights/prompt_embeds.pth", help='提示嵌入路径')
+    parser.add_argument('--output_path', type=str, default="./results_video", help='输出路径')
+    parser.add_argument('--video_path', type=str, required=True, help='源视频路径')
+    parser.add_argument('--image_path', type=str, required=True, help='风格参考图像路径')
+    
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
+    args = parse_args()
+    
     config = {
-        "random_seed": 42,
-        "video_length": 129,
-        "height": 720,
-        "width": 1248,
-        "num_inference_steps": 25,
-        "ckpt_t2v_path": "./Wan2.1-T2V-1.3B-Diffusers",
-        "ckpt_dit_path": "weights/dit.ckpt",
-        "prompt_embeds_path": "weights/prompt_embeds.pth",
-        "output_path": "./results"
+        "random_seed": args.random_seed,
+        "video_length": args.video_length,
+        "height": args.height,
+        "width": args.width,
+        "num_inference_steps": args.num_inference_steps,
+        "ckpt_t2v_path": args.ckpt_t2v_path,
+        "ckpt_dit_path": args.ckpt_dit_path,
+        "prompt_embeds_path": args.prompt_embeds_path,
+        "output_path": args.output_path
     }
     
     # 初始化推理器
     inference_engine = VideoStyleInference(config)
     
-    data_list = [
-        {
-            "video_path": "assets/example/2.mp4",
-            "image_path": "assets/example/2-0.png"
-        },
-        {
-            "video_path": "assets/example/2.mp4",
-            "image_path": "assets/example/2-1.png"
-        },
-    ]
-
-    for step, data in enumerate(data_list):
-        video_path = data['video_path']
-        style_image_path = data['image_path']
-        
-        source_video = load_video(video_path, config['video_length'])
-        style_image = Image.open(style_image_path)
-        style_image = np.array(style_image)
-        style_image = torch.from_numpy(style_image) / 127.5 - 1.0
-        style_image = style_image[None, None, :, :, :]  # 添加 batch 和 frame 维度
-        
-        with torch.no_grad():
-            generated_video = inference_engine.inference(source_video, style_image, video_path, step)
-        
-        os.makedirs(config['output_path'], exist_ok=True)
-        output_filename = f"{config['output_path']}/{step}.mp4"
-        export_to_video(generated_video, output_filename)
+    video_path = args.video_path
+    style_image_path = args.image_path
+    
+    source_video = load_video(video_path, config['video_length'])
+    style_image = Image.open(style_image_path)
+    style_image = np.array(style_image)
+    style_image = torch.from_numpy(style_image) / 127.5 - 1.0
+    style_image = style_image[None, None, :, :, :]  # 添加 batch 和 frame 维度
+    
+    with torch.no_grad():
+        generated_video = inference_engine.inference(source_video, style_image, video_path, 0)
+    
+    os.makedirs(config['output_path'], exist_ok=True)
+    output_filename = f"{config['output_path']}/generated_video.mp4"
+    export_to_video(generated_video, output_filename)
                 

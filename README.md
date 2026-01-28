@@ -60,12 +60,12 @@ We provide inference scripts for running TeleStyle on demo inputs for each task:
 
 #### Image Stylization
 ```
-python telestyleimage_inference.py 
+python telestyleimage_inference.py --image_path assets/example/0.png --style_path videos/1.png --output_path results/image.png
 ```
 
 #### Video Stylization
 ```
-python telestylevideo_inference.py 
+python telestylevideo_inference.py --video_path assets/example/1.mp4 --style_path assets/example/1-0.png --output_path results/video.mp4
 ```
 
 
