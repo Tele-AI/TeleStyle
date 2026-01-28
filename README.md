@@ -7,7 +7,7 @@
 <br>
 <div align="center">
     [<a href="https://tele-ai.github.io/TeleStyle/" target="_blank">Project Page</a>]
-    [<a href="todo" target="_blank">arXiv(comming)</a>]
+    [<a href="todo" target="_blank">arXiv(coming)</a>]
     [<a href="https://huggingface.co/Tele-AI/TeleStyle" target="_blank">Hugging Face</a>]
     [<a href="https://github.com/Tele-AI/TeleStyle" target="_blank">GitHub</a>]
 </div>
