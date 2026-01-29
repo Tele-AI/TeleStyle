@@ -7,7 +7,7 @@
 <br>
 <div align="center">
     [<a href="https://tele-ai.github.io/TeleStyle/" target="_blank">Project Page</a>]
-    [<a href="todo" target="_blank">arXiv(coming)</a>]
+    [<a href="http://arxiv.org/abs/2601.20175" target="_blank">arXiv</a>]
     [<a href="https://huggingface.co/Tele-AI/TeleStyle" target="_blank">Hugging Face</a>]
     [<a href="https://github.com/Tele-AI/TeleStyle" target="_blank">GitHub</a>]
 </div>
@@ -17,13 +17,14 @@ Content-preserving style transfer—generating stylized outputs based on content
 
 ## Latest News
 
-- Jan 28, 2026: We release the <a href="https://github.com/Tele-AI/TeleStyle" target="_blank">code</a> and <a href="https://huggingface.co/Tele-AI/TeleStyle" target="_blank">model</a> of TeleStyle
+- Jan 28, 2026: We release the <a href="https://github.com/Tele-AI/TeleStyle" target="_blank">code</a> and <a href="https://huggingface.co/Tele-AI/TeleStyle" target="_blank">model</a> of TeleStyle.
+- - Jan 29, 2026: We release the <a href="[https://github.com/Tele-AI/TeleStyle](http://arxiv.org/abs/2601.20175)" target="_blank">technical report </a>  of TeleStyle.
 
 ## Todo List
 
 - [x] Release inference code
 - [x] Release models
-- [ ] Release technical report
+- [x] Release technical report
 
 
 
@@ -72,13 +73,10 @@ python telestylevideo_inference.py --video_path assets/example/1.mp4 --style_pat
 ## Citation
 If you find TeleStyle useful in your research, please kindly cite our paper:
 ```bibtex
-@misc{teleai2026telestyle,
+@article{teleai2026telestyle,
     title={TeleStyle: Content-Preserving Style Transfer in Images and Videos}, 
     author={Shiwen Zhang and Xiaoyan Yang and Bojia Zi and Haibin Huang and Chi Zhang and Xuelong Li},
-    year={2026},
-    eprint={todo},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/todo}, 
+    journal={arXiv preprint arXiv:2601.20175},
+    year={2026}
 }
-```
+
