@@ -1,3 +1,4 @@
+git+https://github.com/modelscope/DiffSynth-Studio.git@11315d7
 opencv-python
 diffusers==0.36.0
 transformers==4.49.0
