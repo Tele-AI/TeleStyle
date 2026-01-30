@@ -37,9 +37,9 @@ pip install -r requirements.txt
 
 This environment is tested with:
 - Python 3.11
-- PyTorch 2.4.1 + CUDA 12.1
+- PyTorch 2.9.1 + CUDA 12.1
 - diffusers 0.36.0
-- transformers 4.49.0
+- transformers 4.57.3
 
 ### 2. Download Checkpoint
 
