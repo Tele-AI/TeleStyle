@@ -55,7 +55,7 @@ class VideoStyleInference:
         self.W = config['width']
         self.num_inference_steps = config['num_inference_steps']
         self.vae_path = os.path.join(config['ckpt_t2v_path'], "vae")
-        self.transformer_config_path = os.path.join(config['ckpt_t2v_path'], "transformer_config.json")
+        self.transformer_config_path = os.path.join(config['ckpt_t2v_path'], "transformer", "config.json")
         self.scheduler_path = os.path.join(config['ckpt_t2v_path'], "scheduler")
         self.ckpt_path = config['ckpt_dit_path']
         self.output_path = config['output_path']
