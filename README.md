@@ -65,7 +65,7 @@ python telestyleimage_inference.py
 
 #### Video Stylization
 ```
-python telestylevideo_inference.py --video_path assets/example/1.mp4 --style_path assets/example/1-0.png --output_path results/video.mp4
+python telestylevideo_inference.py --video_path assets/example/1.mp4 --image_path assets/example/1-0.png --output_path results
 ```
 
 
