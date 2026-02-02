@@ -44,7 +44,9 @@ This environment is tested with:
 
 ### 2. Download Checkpoint
 
-Download the [TeleStyle checkpoint](https://huggingface.co/Tele-AI/TeleStyle/tree/main) to a local path for example `weights/`:
+Download the [Wan2.1-T2V-1.3B-Diffusers]([https://huggingface.co/Tele-AI/TeleStyle/tree/main](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers)) to a local path for example `./`.
+
+Download the [TeleStyle checkpoint](https://huggingface.co/Tele-AI/TeleStyle/tree/main) to a local path for example `./weights/`:
 
 We provide Image and Video checkpoint:
 
