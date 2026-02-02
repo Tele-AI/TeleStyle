@@ -10,6 +10,7 @@
     [<a href="http://arxiv.org/abs/2601.20175" target="_blank">arXiv</a>]
     [<a href="https://huggingface.co/Tele-AI/TeleStyle" target="_blank">Hugging Face</a>]
     [<a href="https://github.com/Tele-AI/TeleStyle" target="_blank">GitHub</a>]
+    [<a href="https://huggingface.co/spaces/witcherderivia/TeleStyle" target="_blank">Demo</a>]
 </div>
 
 ## Abstract
