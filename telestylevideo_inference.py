@@ -152,7 +152,7 @@ class VideoStyleInference:
             first_latents=first_latents,
             neg_first_latents=neg_first_latents,
             num_frames=self.video_length,
-            guidance_scale=3.0,
+            guidance_scale=1.0,
             height=output_h,
             width=output_w,
             prompt_embeds_=prompt_embeds_,
