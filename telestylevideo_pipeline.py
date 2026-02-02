@@ -23,7 +23,7 @@ from transformers import AutoTokenizer, UMT5EncoderModel
 from diffusers.callbacks import MultiPipelineCallbacks, PipelineCallback
 from diffusers.loaders import WanLoraLoaderMixin
 from diffusers.models import AutoencoderKLWan
-from transformer_semi_dit_2_patch_embedders import WanTransformer3DModel
+from telestylevideo_transformer import WanTransformer3DModel
 from diffusers.schedulers import FlowMatchEulerDiscreteScheduler
 from diffusers.utils import is_torch_xla_available, logging, replace_example_docstring
 from diffusers.utils.torch_utils import randn_tensor
