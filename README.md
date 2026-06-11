@@ -73,6 +73,7 @@ python telestylevideo_inference.py --video_path assets/example/1.mp4 --image_pat
 
 ### ComfyUI
 Thanks to the community for providing the ComfyUI implementation:
+- [aistudynow/Comfyui-tetestyle-image-video](https://github.com/aistudynow/Comfyui-tetestyle-image-video)
 - [neurodanzelus-cmd/ComfyUI-TeleStyle](https://github.com/neurodanzelus-cmd/ComfyUI-TeleStyle)
 
 ## Citation
